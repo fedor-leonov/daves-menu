@@ -90,8 +90,6 @@ spawn(function()
     end)
 end)
 
--- autoclick
-
 -- support notif
 spawn(function() 
     game.StarterGui:SetCore("SendNotification", {
