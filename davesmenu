@@ -2,8 +2,8 @@
 -- synapse use only
 -- dave perkins#5765
 
-local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
-local w = library:CreateWindow("dave's menu") 
+local library = loadstring(game:HttpGet(("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3")))()
+local w = library:CreateWindow("dave"s menu") 
 local c = w:CreateFolder("Combat")
 local p = w:CreateFolder("Player") 
 local o = w:CreateFolder("Other")
@@ -66,17 +66,17 @@ end)
 spawn(function()
     game:GetService("UserInputService").JumpRequest:connect(function()
         if _G.InfiniteJumpEnabled then
-            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid":ChangeState("Jumping")
         end
     end)
 end)
 
 -- hitbox expander
 spawn(function() 
-    game:GetService('RunService').RenderStepped:connect(function()
+    game:GetService("RunService").RenderStepped:connect(function()
         if _G.HitboxEnabled then
-            for i,v in next, game:GetService('Players'):GetPlayers() do
-                if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+            for i,v in next, game:GetService("Players"):GetPlayers() do
+                if v.Name ~= game:GetService("Players").LocalPlayer.Name then
                     pcall(function()
                         v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
                         v.Character.HumanoidRootPart.Transparency = 0.7
@@ -90,11 +90,15 @@ spawn(function()
     end)
 end)
 
--- support notif
+-- initialize
 spawn(function() 
+    setfflag("AbuseReportScreenshot", "False")
+    setfflag("AbuseReportScreenshotPercentage", "0")
     game.StarterGui:SetCore("SendNotification", {
         Title = "Have fun!";
         Text = "Support can be found in the menu!";
         Duration = 5;
     })
+    rconsoleprint("@@GREEN@")
+    rconsoleprint("dave"s menu loaded.")
 end)
