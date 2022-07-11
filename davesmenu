@@ -3,7 +3,7 @@
 -- dave perkins#5765
 
 local library = loadstring(game:HttpGet(("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3")))()
-local w = library:CreateWindow("dave"s menu") 
+local w = library:CreateWindow("dave's menu") 
 local c = w:CreateFolder("Combat")
 local p = w:CreateFolder("Player") 
 local o = w:CreateFolder("Other")
@@ -91,9 +91,7 @@ spawn(function()
 end)
 
 -- initialize
-spawn(function() 
-    setfflag("AbuseReportScreenshot", "False")
-    setfflag("AbuseReportScreenshotPercentage", "0")
+spawn(function()
     game.StarterGui:SetCore("SendNotification", {
         Title = "Have fun!";
         Text = "Support can be found in the menu!";
