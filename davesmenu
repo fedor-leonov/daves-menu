@@ -97,6 +97,4 @@ spawn(function()
         Text = "Support can be found in the menu!";
         Duration = 5;
     })
-    rconsoleprint("@@GREEN@")
-    rconsoleprint("dave"s menu loaded.")
 end)
