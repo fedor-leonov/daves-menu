@@ -55,11 +55,18 @@ spawn(function()
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
     end)
 
-    o:Label("dave perkins#5765",{
-        TextSize = 10; 
-        TextColor = Color3.fromRGB(69,69,69); 
-        BgColor = Color3.fromRGB(10,10,10); 
-    }) 
+    o:Button("Support", function()
+        setclipboard("https://discord.gg/4aQktFWYga")
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Copied to clipboard!";
+            Text = "Use the URL to join the Discord";
+            Duration = 5;
+        })
+    end) 
+    
+    b:Button("Button",function()
+        print("Elym Winning")
+    end)
 end)
 
 -- infinite jump
@@ -92,6 +99,7 @@ end)
 
 -- initialize
 spawn(function()
+    setclipboard("https://discord.gg/4aQktFWYga")
     game.StarterGui:SetCore("SendNotification", {
         Title = "Have fun!";
         Text = "Support can be found in the menu!";
